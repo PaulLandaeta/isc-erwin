@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vocacional.ia - Iniciar Test</title>
+    <link rel="icon" href="img/ico.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="test-body">
+    <header class="header">
+        <div class="header-container-test">
+            <img src="img/UPB.png" alt="Logo UPB" class="logo-upb">
+        </div>
+    </header>
+    <div class="header-line"></div>
+
+    <main class="test-main">
+        <!-- SECCIÓN 1: FORMULARIO INICIAL -->
+        <div class="test-container" id="form-section">
+            <h1 class="test-title">Descubre tu carrera ideal</h1>
+            <p class="test-subtitle">Completa tus datos para comenzar tu test vocacional</p>
+
+            <form id="form-test" class="form-container">
+                <div class="form-group">
+                    <label for="nombre">Nombre completo</label>
+                    <input type="text" id="nombre" name="nombre" class="form-input"
+                        placeholder="Juan Perez Rodriguez Palermo">
+                    <span class="error-msg" id="error-nombre">Este campo no puede estar vacío</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="correo">Correo electronico</label>
+                    <input type="email" id="correo" name="correo" class="form-input" placeholder="Ej. upb@correo.com">
+                    <span class="error-msg" id="error-correo">Ingresa un correo electrónico válido</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="whatsapp">Numero de WhatsApp</label>
+                    <input type="tel" id="whatsapp" name="whatsapp" class="form-input" placeholder="Ej. 71946779">
+                    <span class="error-msg" id="error-whatsapp">Este campo no puede estar vacío</span>
+                </div>
+
+                <div class="form-actions right">
+                    <button type="submit" class="btn btn-blue btn-submit" id="btn-form-submit">
+                        <span id="btn-form-text">Siguiente</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-arrow">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <!-- SECCIÓN 2: EL CUESTIONARIO -->
+        <div class="test-container" id="quiz-section" style="display: none;">
+            <div class="quiz-header">
+                <span class="quiz-step" id="quiz-step">PREGUNTA 1 DE 10</span>
+                <span class="quiz-percent" id="quiz-percent">0% COMPLETADO</span>
+            </div>
+
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="progress-bar" style="width: 0%;"></div>
+            </div>
+
+            <div class="quiz-content">
+                <h2 class="question-text" id="question-text">Cargando...</h2>
+                <div class="options-container" id="options-container">
+                    <!-- Las opciones se inyectan dinámicamente con JS -->
+                </div>
+                <!-- Mensaje de error si no selecciona respuesta -->
+                <span class="error-msg" id="error-option"
+                    style="text-align: center; margin-top: 10px; margin-bottom: 20px;">Por favor selecciona una opción
+                    para avanzar.</span>
+            </div>
+
+            <!-- Oculto hasta enviar a n8n -->
+            <div id="status-message" class="status-msg"></div>
+
+            <div class="form-actions right">
+                <button type="button" class="btn btn-blue btn-submit" id="btn-next-question">
+                    <span id="btn-quiz-text">Siguiente</span>
+                    <div class="loader-spinner" id="btn-quiz-loader" style="display: none;"></div>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" class="icon-arrow" id="btn-quiz-icon">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- SECCIÓN 3: RESULTADO -->
+        <div class="test-container" id="result-section" style="display: none;">
+            <div class="result-card">
+                <h2 class="result-title">Tu carrera ideal es:</h2>
+                <h1 class="result-career" id="res-carrera">Cargando...</h1>
+                <p class="result-explanation" id="res-explicacion">Cargando explicación...</p>
+
+                <div class="result-grid">
+                    <div class="result-box">
+                        <h3>Tus Fortalezas</h3>
+                        <ul id="res-fortalezas"></ul>
+                    </div>
+                    <div class="result-box">
+                        <h3>Áreas de Enfoque</h3>
+                        <ul id="res-areas"></ul>
+                    </div>
+                </div>
+
+                <div class="result-recommendation">
+                    <h3>Recomendación</h3>
+                    <p id="res-recomendacion"></p>
+                </div>
+
+                <div class="form-actions center" style="margin-top: 32px; display: flex; justify-content: center;">
+                    <a href="index.html" class="btn btn-blue" style="text-decoration: none;">Volver al inicio</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
