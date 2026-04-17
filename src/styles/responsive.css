@@ -1,0 +1,66 @@
+.register-page {
+  padding: 28px 0 36px;
+}
+
+.register-card {
+  padding: 28px 20px;
+  border-radius: 22px;
+}
+
+.register-card__title {
+  font-size: 30px;
+}
+
+.register-card__description {
+  font-size: 16px;
+}
+
+.form-input {
+  min-height: 50px;
+  font-size: 15px;
+}
+
+.test-page {
+  padding: 28px 0 36px;
+}
+
+.test-card {
+  padding: 28px 20px;
+  border-radius: 22px;
+}
+
+.test-card__title {
+  font-size: 30px;
+}
+
+.test-card__description {
+  font-size: 16px;
+}
+
+@media (max-width: 600px) {
+  .question-card {
+    padding: 24px 20px;
+    border-radius: 12px;
+  }
+
+  .question-card__title {
+    font-size: 20px;
+    margin-bottom: 24px;
+  }
+
+  .question-option {
+    padding: 14px 16px;
+    font-size: 15px;
+  }
+
+  .question-card__actions {
+    flex-direction: column-reverse;
+    gap: 12px;
+    padding-top: 20px;
+  }
+
+  .question-card__actions .btn--dark,
+  .question-card__actions .btn--secondary-outline {
+    width: 100%;
+  }
+}

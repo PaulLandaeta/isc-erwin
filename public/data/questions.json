@@ -1,0 +1,147 @@
+[
+  {
+    "id": 1,
+    "text": "Si tuvieras un sábado libre para aprender algo nuevo, ¿qué elegirías?",
+    "options": [
+      "Código/IA",
+      "Inversiones/Bolsa",
+      "Salud/Medicina",
+      "Estrategia Militar"
+    ]
+  },
+  {
+    "id": 2,
+    "text": "¿Disfrutas analizar grandes volúmenes de datos para buscar patrones?",
+    "options": [
+      "Sí, me fascina",
+      "Prefiero el trato con personas",
+      "Prefiero el trabajo físico/manual"
+    ]
+  },
+  {
+    "id": 3,
+    "text": "¿Qué te atrae más de la tecnología?",
+    "options": [
+      "Crear software/IA",
+      "Redes y Ciberseguridad",
+      "Maquinaria pesada",
+      "No me atrae tanto"
+    ]
+  },
+  {
+    "id": 4,
+    "text": "¿Con qué prefieres trabajar principalmente?",
+    "options": [
+      "Datos y algoritmos",
+      "Personas y psicología",
+      "Objetos físicos y construcción",
+      "Animales/Naturaleza"
+    ]
+  },
+  {
+    "id": 5,
+    "text": "¿Te motiva manejar máquinas, reparar objetos o diseñar estructuras físicas?",
+    "options": [
+      "Sí, la parte mecánica/civil",
+      "No, prefiero el mundo digital",
+      "Prefiero la gestión de negocios"
+    ]
+  },
+  {
+    "id": 6,
+    "text": "Ante un problema difícil, ¿qué enfoque prefieres?",
+    "options": [
+      "Lógica innovadora/IA",
+      "Normas y leyes",
+      "Protocolos médicos/urgencia",
+      "Estrategia de mercado"
+    ]
+  },
+  {
+    "id": 7,
+    "text": "¿Te interesan las ciencias naturales, el laboratorio o el cuidado del ecosistema?",
+    "options": [
+      "Sí, medio ambiente/bioingeniería",
+      "Prefiero los negocios",
+      "Prefiero la tecnología pura"
+    ]
+  },
+  {
+    "id": 8,
+    "text": "Si pudieras salvar una institución, ¿cuál elegirías?",
+    "options": [
+      "Central Tecnológica",
+      "Bolsa de Valores",
+      "Hospital",
+      "Centro de Ayuda Social/Político"
+    ]
+  },
+  {
+    "id": 9,
+    "text": "¿Qué te resulta más fácil entender?",
+    "options": [
+      "Un manual técnico/planos",
+      "Las emociones de otros",
+      "Un balance financiero",
+      "Un mapa táctico"
+    ]
+  },
+  {
+    "id": 10,
+    "text": "¿Te interesa el mundo de los negocios, las ventas o el emprendimiento global?",
+    "options": [
+      "Sí, mucho",
+      "Solo si hay tecnología de por medio",
+      "No, prefiero el área social"
+    ]
+  },
+  {
+    "id": 11,
+    "text": "Si tuvieras que crear algo desde cero, ¿qué sería?",
+    "options": [
+      "Una App/IA",
+      "Una marca/diseño",
+      "Un plan de salud pública",
+      "Una ley o política nacional"
+    ]
+  },
+  {
+    "id": 12,
+    "text": "¿Cómo prefieres expresar tus ideas o resultados?",
+    "options": [
+      "Gráficos y visuales",
+      "Debates y leyes",
+      "Análisis de datos económicos",
+      "Diagnósticos médicos"
+    ]
+  },
+  {
+    "id": 13,
+    "text": "¿En qué ambiente te sentirías más cómodo trabajando?",
+    "options": [
+      "Oficina financiera/Bolsa",
+      "Agencia de Marketing/Turismo",
+      "Campo militar/policial",
+      "Laboratorio/Campo natural"
+    ]
+  },
+  {
+    "id": 14,
+    "text": "¿Qué tipo de impacto quieres dejar en el mundo?",
+    "options": [
+      "Avance tecnológico/IA",
+      "Estabilidad económica/negocios",
+      "Justicia y derechos humanos",
+      "Salud y bienestar físico"
+    ]
+  },
+  {
+    "id": 15,
+    "text": "¿Cómo prefieres trabajar en el día a día?",
+    "options": [
+      "Con flexibilidad y creatividad",
+      "Con disciplina y jerarquía estricta",
+      "Con responsabilidad sobre la vida de otros"
+    ]
+  }
+]

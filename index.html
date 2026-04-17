@@ -1,64 +1,32 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vocacional.ia - Proyecto carrera IA</title>
-    <link rel="icon" href="img/ico.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+
+  <!-- Responsive -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO básico -->
+  <title>Vocacional IA | Descubre tu carrera ideal</title>
+  <meta name="description" content="Descubre qué carrera es ideal para ti con inteligencia artificial. Test vocacional rápido y personalizado." />
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://framerusercontent.com/images/UDOfDotWCa6waQ9LYHHQoIe0P9M.png" type="image/x-icon">
+
+  <!-- Fuentes (opcional, puedes cambiar luego) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS principal -->
+  <link rel="stylesheet" href="./src/styles/main.css" />
 </head>
+
 <body>
-    <header class="header">
-        <div class="header-container">
-            <img src="img/UPB.png" alt="Logo UPB" class="logo-upb">
-            <button class="btn btn-yellow" id="btn-comienza">Comienza tu test</button>
-        </div>
-    </header>
 
-    <main class="main-section">
-        <div class="container main-content">
-            <div class="content-left">
-                <span class="subtitle">Proyecto carrera IA</span>
-                <h2 class="brand-name">Vocacional.ia</h2>
-                
-                <h1 class="main-title">
-                    Descubre la<br>
-                    <span class="highlight">carrera ideal</span><br>
-                    para tu<br>
-                    futuro.
-                </h1>
+  <!-- CONTENEDOR PRINCIPAL DE LA SPA -->
+  <div id="app"></div>
 
-                <p class="description">
-                    Un test vocacional inteligente diseñado para ayudarte a encontrar el camino profesional que mejor se adapta a tus habilidades y pasiones.
-                </p>
+  <!-- JS principal -->
+  <script type="module" src="./src/js/main.js"></script>
 
-                <div class="button-group">
-                    <button class="btn btn-blue" id="btn-iniciar">
-                        Iniciar test vocacional
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-arrow"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                    </button>
-                    <button class="btn btn-green" id="btn-contacto">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-whatsapp">
-                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                        </svg>
-                        Contáctanos
-                    </button>
-                </div>
-            </div>
-            
-            <div class="content-right">
-                <img src="img/person.jpeg" alt="Estudiante UPB" class="hero-image">
-            </div>
-        </div>
-    </main>
-
-    <footer class="footer">
-        <div class="footer-container">
-            <img src="img/UPB.png" alt="Logo UPB" class="logo-upb">
-            <img src="img/logotech.jpg" alt="Escuela Tecnológica" class="logo-tech">
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,30 @@
+@import "./variables.css";
+@import "./layout.css";
+@import "./components.css";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #efefef;
+  color: #1f1f1f;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+a {
+  font: inherit;
+}

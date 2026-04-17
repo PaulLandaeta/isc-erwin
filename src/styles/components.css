@@ -1,0 +1,101 @@
+.site-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  color: white;
+  text-decoration: none;
+}
+
+.site-logo__image {
+  height: 48px;
+  width: auto;
+}
+
+.site-logo__text {
+  font-size: 56px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: none;
+  border-radius: 14px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.18s ease, opacity 0.18s ease, box-shadow 0.18s ease;
+  font-weight: 700;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  opacity: 0.96;
+}
+
+.btn--header {
+  min-height: 56px;
+  padding: 0 28px;
+  font-size: 18px;
+}
+
+.btn--primary {
+  background: var(--color-secondary);
+  color: var(--color-primary);
+}
+
+.btn--dark {
+  min-height: 60px;
+  padding: 0 28px;
+  background: var(--color-primary);
+  color: white;
+  font-size: 18px;
+  box-shadow: var(--shadow-soft);
+}
+
+.btn--success {
+  min-height: 56px;
+  padding: 0 26px;
+  background: var(--color-success);
+  color: white;
+  font-size: 18px;
+}
+
+.btn__arrow {
+  font-size: 24px;
+  line-height: 1;
+}
+
+.footer-logo {
+  width: auto;
+  height: 40px;
+}
+
+.footer-logo--fia {
+  height: 50px;
+}
+
+.site-logo-button {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.site-logo-button:hover {
+  opacity: 0.95;
+}
+
+.form-error {
+  font-size: 14px;
+  color: #e53935;
+  margin-top: 6px;
+  min-height: 18px;
+}
+
+.form-input.error {
+  border: 2px solid #e53935;
+}
