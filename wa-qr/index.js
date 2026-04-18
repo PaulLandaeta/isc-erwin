@@ -5,7 +5,8 @@ const {
   DisconnectReason,
 } = require('@whiskeysockets/baileys')
 const P = require('pino')
-const qrcode = require('qrcode-terminal')
+const qrcodeTerminal = require('qrcode-terminal')
+const QRCode = require('qrcode')
 const express = require('express')
 const cors = require('cors')
 
@@ -13,6 +14,7 @@ const PORT = process.env.PORT || 3000
 const ALLOWED_ORIGIN = process.env.ALLOWED_ORIGIN || '*'
 let sockGlobal = null
 let isConnecting = false
+let currentQR = null
 
 async function startBot() {
   if (isConnecting) return
@@ -36,8 +38,10 @@ async function startBot() {
 
     sock.ev.on('connection.update', ({ connection, lastDisconnect, qr }) => {
       if (qr) {
+        currentQR = qr
         console.log('\nEscanea este QR con WhatsApp:\n')
-        qrcode.generate(qr, { small: true })
+        qrcodeTerminal.generate(qr, { small: true })
+        console.log(`\n👉 O ábrelo en el navegador: /qr\n`)
       }
 
       if (connection === 'connecting') {
@@ -46,6 +50,7 @@ async function startBot() {
 
       if (connection === 'open') {
         console.log('✅ WhatsApp conectado')
+        currentQR = null
         isConnecting = false
       }
 
@@ -88,8 +93,38 @@ function startHttpServer() {
     res.json({
       ok: true,
       whatsappConnected: !!sockGlobal,
+      hasQR: !!currentQR,
       service: 'whatsapp-baileys',
     })
+  })
+
+  app.get('/qr', async (req, res) => {
+    if (!currentQR) {
+      if (sockGlobal) {
+        return res.status(200).send('✅ WhatsApp ya está conectado, no hay QR pendiente.')
+      }
+      return res.status(404).send('No hay QR disponible todavía. Refresca en unos segundos.')
+    }
+    try {
+      const png = await QRCode.toBuffer(currentQR, { width: 400, margin: 2 })
+      res.type('png').send(png)
+    } catch (err) {
+      res.status(500).send('Error generando QR: ' + err.message)
+    }
+  })
+
+  app.get('/', (req, res) => {
+    const connected = !!sockGlobal
+    const hasQr = !!currentQR
+    res.type('html').send(`<!doctype html>
+<html><head><meta charset="utf-8"><title>WA QR</title>
+<meta http-equiv="refresh" content="5">
+<style>body{font-family:system-ui;text-align:center;padding:40px;background:#111;color:#eee}
+img{border:8px solid #fff;border-radius:8px}
+.ok{color:#25D366;font-size:22px}</style></head><body>
+<h1>WhatsApp Baileys</h1>
+${connected ? '<p class="ok">✅ Conectado</p>' : hasQr ? '<p>Escanea con WhatsApp:</p><img src="/qr" width="400" height="400"/>' : '<p>Esperando QR... (se refresca cada 5s)</p>'}
+</body></html>`)
   })
 
   app.post('/send', async (req, res) => {
